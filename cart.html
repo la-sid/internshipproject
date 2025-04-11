@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart Summary Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 20px;
+    }
+    .brand-container{
+        max-width: 1200px;
+      margin: auto;
+      display: flex;
+      gap: 20px;
+    }
+
+    .cart-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      gap: 20px;
+    }
+
+    .cart-left {
+      flex: 2;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .cart-header {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .cart-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 15px 0;
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .item-info {
+      max-width: 60%;
+    }
+
+    .item-info h4 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+
+    .item-info p {
+      font-size: 14px;
+      color: #6b7280;
+      margin: 4px 0;
+    }
+
+    .item-actions {
+      margin-top: 10px;
+    }
+
+    .item-actions button {
+      margin-right: 10px;
+      padding: 5px 12px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .remove-btn {
+      background-color: #ef4444;
+      color: white;
+    }
+
+    .save-btn {
+      background-color: #e5e7eb;
+    }
+
+    .qty-box {
+      text-align: right;
+    }
+
+    .qty-box p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+
+    .qty-box input {
+      padding: 4px 8px;
+      font-size: 14px;
+    }
+
+    .cart-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .cart-actions a {
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      background-color: #3b82f6;
+      color: white;
+      font-size: 14px;
+    }
+
+    .cart-right {
+      flex: 1;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      height: fit-content;
+    }
+
+    .coupon-box input {
+      width: 60%;
+      padding: 8px;
+      margin-right: 10px;
+    }
+
+    .coupon-box button {
+      padding: 8px 12px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .summary-line.positive {
+      color: green;
+    }
+
+    .summary-line.negative {
+      color: red;
+    }
+
+    .total {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      background-color: #22c55e;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .payment-icons {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .payment-icons img {
+      width: 30px;
+      margin: 0 5px;
+    }
+    .column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-shopping bag"></i>
+            <span id="logoName">Brand</span>
+            <i class="fas fa-person"></i>
+            <span id="logoName">Profile</span>
+            <i class="fas fa-message"></i>
+            <span id="logoName">Message</span>
+            <i class="fas fa-heart"></i>
+            <span id="logoName">orders</span>
+            <i class="fas fa-shopping-cart"></i>
+            <span id="logoName">My Cart</span>
+            </div>
+
+  <div class="cart-container">
+    <div class="cart-left">
+      <div class="cart-header">My cart (3)</div>
+
+      <div class="cart-item">
+        <div class="item-row">
+          <div class="item-info">
+            <h4> <img src="F:\internship project\image34.png"> T-shirts with multiple colors, for men and lady</h4>
+            <p>Size: medium, Color: blue, Material: Plastic</p>
+            <p>Seller: Artel Market</p>
+            <div class="item-actions">
+              <button class="remove-btn">Remove</button>
+              <button class="save-btn">Save for later</button>
+            </div>
+          </div>
+          <div class="qty-box">
+            <p>$78.99</p>
+            <p>Qty: 9</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <div class="item-row">
+          <div class="item-info">
+            <h4><img src="F:\internship project\image34.png"> T-shirts with multiple colors, for men and lady</h4>
+            <p>Size: medium, Color: blue, Material: Plastic</p>
+            <p>Seller: Best factory LLC</p>
+            <div class="item-actions">
+              <button class="remove-btn">Remove</button>
+              <button class="save-btn">Save for later</button>
+            </div>
+          </div>
+          <div class="qty-box">
+            <p>$39.00</p>
+            <p>Qty: 3</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <div class="item-row">
+          <div class="item-info">
+            <h4><img src="F:\internship project\image34.png"> T-shirts with multiple colors, for men and lady</h4>
+            <p>Size: medium, Color: blue, Material: Plastic</p>
+            <p>Seller: Artel Market</p>
+            <div class="item-actions">
+              <button class="remove-btn">Remove</button>
+              <button class="save-btn">Save for later</button>
+            </div>
+          </div>
+          <div class="qty-box">
+            <p>$170.50</p>
+            <p>Qty: 1</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-actions">
+        <a href="#">← Back to shop</a>
+        <a href="#">Remove all</a>
+      </div>
+    </div>
+
+    <div class="cart-right">
+      <div class="coupon-box">
+        <p><strong>Have a coupon?</strong></p>
+        <input type="text" placeholder="Add coupon">
+        <button>Apply</button>
+      </div>
+
+      <div class="summary-line">
+        <span>Subtotal:</span>
+        <span>$1403.97</span>
+      </div>
+      <div class="summary-line negative">
+        <span>Discount:</span>
+        <span>- $60.00</span>
+      </div>
+      <div class="summary-line positive">
+        <span>Tax:</span>
+        <span>+ $14.00</span>
+      </div>
+
+      <div class="total">Total: <span style="float: right;">$1357.97</span></div>
+
+      <button class="checkout-btn">Checkout</button>
+
+      <div class="payment-icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg" alt="MasterCard">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_PayPal_logo.svg" alt="PayPal">
+      </div>
+    </div>
+  </div>
+  <div style="max-width: 1200px; margin: 40px auto; display: flex; justify-content: space-around; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    <div style="text-align: center;">
+      <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" alt="Secure payment" width="40" style="margin-bottom: 8px;">
+      <div><strong>Secure payment</strong></div>
+      <div style="font-size: 13px; color: gray;">Have you ever finally just</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Customer support" width="40" style="margin-bottom: 8px;">
+      <div><strong>Customer support</strong></div>
+      <div style="font-size: 13px; color: gray;">Have you ever finally just</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Free delivery" width="40" style="margin-bottom: 8px;">
+      <div><strong>Free delivery</strong></div>
+      <div style="font-size: 13px; color: gray;">Have you ever finally just</div>
+    </div>
+  </div>
+  <div><strong>Saved for later</strong></div>
+  <div class="row">
+    <div class="column"></div>
+    <div class="column"></div>
+    <div class="column"></div>
+  </div>
+
+  
+
+  
+  
+    
+
+</body>
+</html>
